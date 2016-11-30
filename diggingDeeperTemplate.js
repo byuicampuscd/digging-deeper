@@ -4,14 +4,18 @@ var diggingDeeper = (function () {
         dataFile = currentScript.dataset.file,
         dataJs = document.createElement("script"),
         cssFiles = [
+            "diggingDeeper.css",
             "https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.css",
             "https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.gallery.min.css"
         ],
         jsFiles = [
+            dataFile,
             "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js",
             "https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.js",
             "https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.gallery.min.js"
         ];
+    
+    console.log(currentScript.dataset);
 
     function injectCSS(url) {
         var linkTag = document.createElement('link');
@@ -25,6 +29,8 @@ var diggingDeeper = (function () {
         scriptTag.src = jsFiles.shift();
         if (jsFiles.length > 0) {
             scriptTag.onload = injectJS;
+        } else {
+            scriptTag.onload = build;
         }
         document.body.appendChild(scriptTag);
     }
@@ -38,19 +44,16 @@ var diggingDeeper = (function () {
         document.getElementById('flex-container').insertAdjacentHTML('beforeend', html);
     }
 
-    function build(data) {
+    function build() {
         var wrapper = '<div id="flex-container" data-featherlight-gallery data-featherlight-filter="a"></div>';
         currentScript.insertAdjacentHTML('afterend', wrapper);
-        data.forEach(insertVideo);
-        injectJS();
+        diggingDeeperVideos.forEach(insertVideo);
     }
 
     // Inject required files
     cssFiles.forEach(injectCSS);
+    injectJS();
 
-
-    dataJs.src = dataFile;
-    document.body.appendChild(dataJs);
     
     return {
         build: build
