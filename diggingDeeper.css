@@ -40,4 +40,31 @@
 
 #flex-container > a img {
     width: 100%;
-}       
+}
+
+/* Loader */
+.externalContent {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #b1b1b1;
+}
+
+.loader {
+    display: inline-block;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -46,7 +46,7 @@ var diggingDeeper = (function () {
 
     function build() {
         var wrapper = '<div id="flex-container" data-featherlight-gallery data-featherlight-filter="a"></div>';
-        currentScript.insertAdjacentHTML('afterend', wrapper);
+        currentScript.previousElementSibling.innerHTML = wrapper;
         diggingDeeperVideos.forEach(insertVideo);
     }
 
