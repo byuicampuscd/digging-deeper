@@ -1,7 +1,7 @@
 var diggingDeeper = (function () {
     'use strict';
     var currentScript = document.getElementById('diggingDeeperTemplate'),
-        dataFile = currentScript.dataset.file,
+        dataFile = currentScript.dataset.videos,
         dataJs = document.createElement("script"),
         cssFiles = [
             "diggingDeeper.css",
@@ -15,7 +15,7 @@ var diggingDeeper = (function () {
             "https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.gallery.min.js"
         ];
     
-    console.log(currentScript.dataset);
+    console.log(dataFile);
 
     function injectCSS(url) {
         var linkTag = document.createElement('link');
@@ -37,7 +37,7 @@ var diggingDeeper = (function () {
 
     function insertVideo(info) {
         var html =
-            `<a href="${info.frameURL}" data-featherlight="iframe">
+            `<a href="${info.frameURL}" data-featherlight="iframe" data-featherlight-variant="videoIframe">
                 <img src="${info.imageURL}" alt="">
                 <p>${info.title}</p>
             </a>`;
