@@ -56,7 +56,7 @@ function createHarchObject(object2Reduce, arrayName = "values") {
     var newArray = [];
     for (var i in object2Reduce) {
         var tempObject = {};
-        tempObject["name"] = i;
+        tempObject["week"] = i;
         tempObject[arrayName] = object2Reduce[i];
         newArray.push(tempObject);
     }
@@ -98,7 +98,7 @@ function determineAlphOrder(string1, string2) {
  * A sort function to sort the harch object in alphabetical order.
  */
 function sortHarchObjectAlph(object1, object2) {
-    return determineAlphOrder(object1.name, object2.name);
+    return determineAlphOrder(object1.week, object2.week);
 }
 
 
@@ -223,7 +223,7 @@ function condenseObjets(path, complete) {
         // takes the now clean data and puts it into a JSON file.
         writeToJSON(completeData.reduce(function (acc, courseObject) {
             console.log(courseObject);
-            acc[courseObject.name] = courseObject.weeks;
+            acc[courseObject.week] = courseObject.weeks;
             return acc;
         }, {}));
     });

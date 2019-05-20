@@ -1,7 +1,7 @@
 {
   "121": [
     {
-      "name": "10",
+      "week": "10",
       "videos": [
         {
           "title": " Finding Faith in the Lord Jesus Christ",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "name": "11",
+      "week": "11",
       "videos": [
         {
           "title": " Pure Testimony",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "name": "12",
+      "week": "12",
       "videos": [
         {
           "title": " The Divine Gift of Repentance",
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "name": "13",
+      "week": "13",
       "videos": [
         {
           "title": " Have You Been Saved?<br>Resurrection",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "name": "14",
+      "week": "14",
       "videos": [
         {
           "title": " Inviting All to Come Unto Christ - sharing the Gospel",
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "name": "2",
+      "week": "2",
       "videos": [
         {
           "title": " Finishers Wanted",
@@ -319,7 +319,7 @@
       ]
     },
     {
-      "name": "3",
+      "week": "3",
       "videos": [
         {
           "title": " A Royal Priesthood",
@@ -372,7 +372,7 @@
       ]
     },
     {
-      "name": "4",
+      "week": "4",
       "videos": [
         {
           "title": " Overcome Even As I Overcome - 1 Nephi 15",
@@ -425,7 +425,7 @@
       ]
     },
     {
-      "name": "5",
+      "week": "5",
       "videos": [
         {
           "title": " And Nothing Shall Offend Them",
@@ -478,7 +478,7 @@
       ]
     },
     {
-      "name": "6",
+      "week": "6",
       "videos": [
         {
           "title": " Nelson Death/Nelson Salvation",
@@ -531,7 +531,7 @@
       ]
     },
     {
-      "name": "7",
+      "week": "7",
       "videos": [
         {
           "title": " All Men Everywhere <br><sub> 2 Nephi 20 </sub>",
@@ -584,7 +584,7 @@
       ]
     },
     {
-      "name": "8",
+      "week": "8",
       "videos": [
         {
           "title": " All Men Everywhere",
@@ -637,7 +637,7 @@
       ]
     },
     {
-      "name": "9",
+      "week": "9",
       "videos": [
         {
           "title": " Chastity: What Are the Limits?",
@@ -686,7 +686,7 @@
   ],
   "122": [
     {
-      "name": "10",
+      "week": "10",
       "videos": [
         {
           "title": " Adversity and the Divine Purpose of Mortality - General Conference April 1989",
@@ -739,7 +739,7 @@
       ]
     },
     {
-      "name": "11",
+      "week": "11",
       "videos": [
         {
           "title": " I Am the Light Which Ye Shall Hold Up - General Conference April 2006",
@@ -792,7 +792,7 @@
       ]
     },
     {
-      "name": "12",
+      "week": "12",
       "videos": [
         {
           "title": " Deep Roots <br> General Conference October 1994",
@@ -845,7 +845,7 @@
       ]
     },
     {
-      "name": "13",
+      "week": "13",
       "videos": [
         {
           "title": " The Peaceable Followers of Christ - General Conference October 1989",
@@ -898,7 +898,7 @@
       ]
     },
     {
-      "name": "14",
+      "week": "14",
       "videos": [
         {
           "title": " Adversity and the Divine Purpose of Mortality - General Conference April 1989",
@@ -951,7 +951,7 @@
       ]
     },
     {
-      "name": "2",
+      "week": "2",
       "videos": [
         {
           "title": " Pray Always - October 2008",
@@ -1004,7 +1004,7 @@
       ]
     },
     {
-      "name": "3",
+      "week": "3",
       "videos": [
         {
           "title": " Personal Purity - October 1998",
@@ -1057,7 +1057,7 @@
       ]
     },
     {
-      "name": "4",
+      "week": "4",
       "videos": [
         {
           "title": " A Return to Virtue",
@@ -1110,7 +1110,7 @@
       ]
     },
     {
-      "name": "5",
+      "week": "5",
       "videos": [
         {
           "title": " Receiving a Testimony of the Restored Gosepl of Jesus Christ - General Conference October 2003",
@@ -1163,7 +1163,7 @@
       ]
     },
     {
-      "name": "6",
+      "week": "6",
       "videos": [
         {
           "title": " Remember Also the Promises - General Conference October 1992",
@@ -1216,7 +1216,7 @@
       ]
     },
     {
-      "name": "7",
+      "week": "7",
       "videos": [
         {
           "title": " Tell Me the Stories of Jesus - General Conference April 2010",
@@ -1269,7 +1269,7 @@
       ]
     },
     {
-      "name": "8",
+      "week": "8",
       "videos": [
         {
           "title": " Behold Your Little Ones - General Conference October 1992",
@@ -1322,7 +1322,7 @@
       ]
     },
     {
-      "name": "9",
+      "week": "9",
       "videos": [
         {
           "title": " Covenants - General Conference October 2011",
@@ -1377,7 +1377,7 @@
   ],
   "121P": [
     {
-      "name": "10",
+      "week": "10",
       "videos": [
         {
           "title": " Finding Faith in the Lord Jesus Christ",
@@ -1430,7 +1430,7 @@
       ]
     },
     {
-      "name": "11",
+      "week": "11",
       "videos": [
         {
           "title": " Pure Testimony",
@@ -1483,7 +1483,7 @@
       ]
     },
     {
-      "name": "12",
+      "week": "12",
       "videos": [
         {
           "title": " The Divine Gift of Repentance",
@@ -1536,7 +1536,7 @@
       ]
     },
     {
-      "name": "13",
+      "week": "13",
       "videos": [
         {
           "title": " Have You Been Saved?<br>Resurrection",
@@ -1589,7 +1589,7 @@
       ]
     },
     {
-      "name": "14",
+      "week": "14",
       "videos": [
         {
           "title": " Inviting All to Come Unto Christ - sharing the Gospel",
@@ -1642,7 +1642,7 @@
       ]
     },
     {
-      "name": "2 ",
+      "week": "2 ",
       "videos": [
         {
           "title": " Finishers Wanted",
@@ -1695,7 +1695,7 @@
       ]
     },
     {
-      "name": "3",
+      "week": "3",
       "videos": [
         {
           "title": " A Royal Priesthood",
@@ -1748,7 +1748,7 @@
       ]
     },
     {
-      "name": "4",
+      "week": "4",
       "videos": [
         {
           "title": " Overcome Even As I Overcome - 1 Nephi 15",
@@ -1801,7 +1801,7 @@
       ]
     },
     {
-      "name": "5",
+      "week": "5",
       "videos": [
         {
           "title": " And Nothing Shall Offend Them",
@@ -1854,7 +1854,7 @@
       ]
     },
     {
-      "name": "6",
+      "week": "6",
       "videos": [
         {
           "title": " Nelson Death/Nelson Salvation",
@@ -1907,7 +1907,7 @@
       ]
     },
     {
-      "name": "7",
+      "week": "7",
       "videos": [
         {
           "title": " All Men Everywhere <br><sub> 2 Nephi 20 </sub>",
@@ -1960,7 +1960,7 @@
       ]
     },
     {
-      "name": "8",
+      "week": "8",
       "videos": [
         {
           "title": " All Men Everywhere",
@@ -2013,7 +2013,7 @@
       ]
     },
     {
-      "name": "9",
+      "week": "9",
       "videos": [
         {
           "title": " Chastity: What Are the Limits?",
