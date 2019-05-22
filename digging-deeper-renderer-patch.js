@@ -39,7 +39,6 @@ function convertIntToXBitString(number, bits) {
     for (var i = 0; i < bits - newNumber.length; i++)
         str += "0";
     return str + newNumber;
-
 }
 
 var dynamicJavascriptLink = 'https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/data' + course + 'Week' + course_module + '.js';

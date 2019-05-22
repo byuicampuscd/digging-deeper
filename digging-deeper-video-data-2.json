@@ -1,7 +1,9 @@
 {
-  "121": [{
+  "121": [
+    {
       "week": "10",
-      "videos": [{
+      "videos": [
+        {
           "title": " Finding Faith in the Lord Jesus Christ",
           "speaker": "Robert D. Hales",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/robert-d-hales.jpg",
@@ -53,7 +55,8 @@
     },
     {
       "week": "11",
-      "videos": [{
+      "videos": [
+        {
           "title": " Pure Testimony",
           "speaker": "M. Russell Ballard",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/m-russell-ballard.jpg",
@@ -105,7 +108,8 @@
     },
     {
       "week": "12",
-      "videos": [{
+      "videos": [
+        {
           "title": " The Divine Gift of Repentance",
           "speaker": "D. Todd Christofferson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/d-todd-christofferson-2.jpg",
@@ -157,7 +161,8 @@
     },
     {
       "week": "13",
-      "videos": [{
+      "videos": [
+        {
           "title": " Have You Been Saved?<br>Resurrection",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-5.jpg",
@@ -209,7 +214,8 @@
     },
     {
       "week": "14",
-      "videos": [{
+      "videos": [
+        {
           "title": " Inviting All to Come Unto Christ - sharing the Gospel",
           "speaker": "Mormon Message",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/inviting-all-to-come-to-christ.jpg",
@@ -261,7 +267,8 @@
     },
     {
       "week": "2",
-      "videos": [{
+      "videos": [
+        {
           "title": " Finishers Wanted",
           "speaker": "Stan Kivett",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/liahona.jpg",
@@ -313,7 +320,8 @@
     },
     {
       "week": "3",
-      "videos": [{
+      "videos": [
+        {
           "title": " A Royal Priesthood",
           "speaker": "James E. Faust",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/james-e-faust.jpg",
@@ -365,7 +373,8 @@
     },
     {
       "week": "4",
-      "videos": [{
+      "videos": [
+        {
           "title": " Overcome Even As I Overcome - 1 Nephi 15",
           "speaker": "Neal A. Maxwell",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/neal-a-maxwell.jpg",
@@ -417,7 +426,8 @@
     },
     {
       "week": "5",
-      "videos": [{
+      "videos": [
+        {
           "title": " And Nothing Shall Offend Them",
           "speaker": "David A. Bednar",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/david-a-bednar.jpg",
@@ -469,7 +479,8 @@
     },
     {
       "week": "6",
-      "videos": [{
+      "videos": [
+        {
           "title": " Nelson Death/Nelson Salvation",
           "speaker": "Russell M. Nelson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/russell-m-nelson.jpg",
@@ -521,7 +532,8 @@
     },
     {
       "week": "7",
-      "videos": [{
+      "videos": [
+        {
           "title": " All Men Everywhere <br><sub> 2 Nephi 20 </sub>",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-2.jpg",
@@ -573,7 +585,8 @@
     },
     {
       "week": "8",
-      "videos": [{
+      "videos": [
+        {
           "title": " All Men Everywhere",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-2.jpg",
@@ -625,7 +638,8 @@
     },
     {
       "week": "9",
-      "videos": [{
+      "videos": [
+        {
           "title": " Chastity: What Are the Limits?",
           "speaker": "Mormon Message",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/chastity.jpg",
@@ -670,9 +684,11 @@
       ]
     }
   ],
-  "122": [{
+  "122": [
+    {
       "week": "10",
-      "videos": [{
+      "videos": [
+        {
           "title": " Adversity and the Divine Purpose of Mortality - General Conference April 1989",
           "speaker": "  Ronald E. Poelman",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/ronald-e-poelman.jpg",
@@ -710,7 +726,7 @@
         },
         {
           "title": " Listen to Learn",
-          "speaker": " Russell M. Nelson",
+          "speaker": "  Russell M. Nelson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/russell-m-nelson.jpg",
           "frameURL": "https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&playerId=kaltura_player&entry_id=0_cjbjeygg&flashvars[streamerType]=auto&flashvars[mediaProxy.mediaPlayTo]=635&flashvars[mediaProxy.mediaPlayFrom]=524&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&&wid=0_oqubdp28"
         },
@@ -724,7 +740,8 @@
     },
     {
       "week": "11",
-      "videos": [{
+      "videos": [
+        {
           "title": " I Am the Light Which Ye Shall Hold Up - General Conference April 2006",
           "speaker": " Sister Susan W. Tanner",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/susan-w-tanner.jpg",
@@ -776,7 +793,8 @@
     },
     {
       "week": "12",
-      "videos": [{
+      "videos": [
+        {
           "title": " Deep Roots <br> General Conference October 1994",
           "speaker": "  Joseph B. Wirthlin",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/joseph-b-wirthlin.jpg",
@@ -828,7 +846,8 @@
     },
     {
       "week": "13",
-      "videos": [{
+      "videos": [
+        {
           "title": " The Peaceable Followers of Christ - General Conference October 1989",
           "speaker": "  L. Tom Perry",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/l-tom-perry.jpg",
@@ -880,7 +899,8 @@
     },
     {
       "week": "14",
-      "videos": [{
+      "videos": [
+        {
           "title": " Adversity and the Divine Purpose of Mortality - General Conference April 1989",
           "speaker": "  Ronald E. Poelman",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/ronald-e-poelman.jpg",
@@ -932,7 +952,8 @@
     },
     {
       "week": "2",
-      "videos": [{
+      "videos": [
+        {
           "title": " Pray Always - October 2008",
           "speaker": "  David A. Bednar",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/david-a-bednar.jpg",
@@ -984,7 +1005,8 @@
     },
     {
       "week": "3",
-      "videos": [{
+      "videos": [
+        {
           "title": " Personal Purity - October 1998",
           "speaker": "  Jeffrey R. Holland",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/jeffrey-r-holland.jpg",
@@ -1036,7 +1058,8 @@
     },
     {
       "week": "4",
-      "videos": [{
+      "videos": [
+        {
           "title": " A Return to Virtue",
           "speaker": "Elaine S. Dalton",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/elaine-s-dalton.jpg",
@@ -1088,7 +1111,8 @@
     },
     {
       "week": "5",
-      "videos": [{
+      "videos": [
+        {
           "title": " Receiving a Testimony of the Restored Gosepl of Jesus Christ - General Conference October 2003",
           "speaker": "  Robert D. Hales",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/robert-d-hales-3.jpg",
@@ -1140,7 +1164,8 @@
     },
     {
       "week": "6",
-      "videos": [{
+      "videos": [
+        {
           "title": " Remember Also the Promises - General Conference October 1992",
           "speaker": "  Jay E. Jensen",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/jay-e-jensen.jpg",
@@ -1192,7 +1217,8 @@
     },
     {
       "week": "7",
-      "videos": [{
+      "videos": [
+        {
           "title": " Tell Me the Stories of Jesus - General Conference April 2010",
           "speaker": "  Neil L. Andersen",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/neil-l-andersen.jpg",
@@ -1244,7 +1270,8 @@
     },
     {
       "week": "8",
-      "videos": [{
+      "videos": [
+        {
           "title": " Behold Your Little Ones - General Conference October 1992",
           "speaker": " Sister Michaelene P. Grassli",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/michaelene-p-grassli.jpg",
@@ -1296,7 +1323,8 @@
     },
     {
       "week": "9",
-      "videos": [{
+      "videos": [
+        {
           "title": " Covenants - General Conference October 2011",
           "speaker": "  Russell M. Nelson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/russell-m-nelson.jpg",
@@ -1347,9 +1375,11 @@
       ]
     }
   ],
-  "121P": [{
+  "121P": [
+    {
       "week": "10",
-      "videos": [{
+      "videos": [
+        {
           "title": " Finding Faith in the Lord Jesus Christ",
           "speaker": "Robert D. Hales",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/robert-d-hales.jpg",
@@ -1401,7 +1431,8 @@
     },
     {
       "week": "11",
-      "videos": [{
+      "videos": [
+        {
           "title": " Pure Testimony",
           "speaker": "M. Russell Ballard",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/m-russell-ballard.jpg",
@@ -1453,7 +1484,8 @@
     },
     {
       "week": "12",
-      "videos": [{
+      "videos": [
+        {
           "title": " The Divine Gift of Repentance",
           "speaker": "D. Todd Christofferson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/d-todd-christofferson-2.jpg",
@@ -1505,7 +1537,8 @@
     },
     {
       "week": "13",
-      "videos": [{
+      "videos": [
+        {
           "title": " Have You Been Saved?<br>Resurrection",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-5.jpg",
@@ -1557,7 +1590,8 @@
     },
     {
       "week": "14",
-      "videos": [{
+      "videos": [
+        {
           "title": " Inviting All to Come Unto Christ - sharing the Gospel",
           "speaker": "Mormon Message",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/inviting-all-to-come-to-christ.jpg",
@@ -1609,7 +1643,8 @@
     },
     {
       "week": "2 ",
-      "videos": [{
+      "videos": [
+        {
           "title": " Finishers Wanted",
           "speaker": "Stan Kivett",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/liahona.jpg",
@@ -1661,7 +1696,8 @@
     },
     {
       "week": "3",
-      "videos": [{
+      "videos": [
+        {
           "title": " A Royal Priesthood",
           "speaker": "James E. Faust",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/james-e-faust.jpg",
@@ -1713,7 +1749,8 @@
     },
     {
       "week": "4",
-      "videos": [{
+      "videos": [
+        {
           "title": " Overcome Even As I Overcome - 1 Nephi 15",
           "speaker": "Neal A. Maxwell",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/neal-a-maxwell.jpg",
@@ -1765,7 +1802,8 @@
     },
     {
       "week": "5",
-      "videos": [{
+      "videos": [
+        {
           "title": " And Nothing Shall Offend Them",
           "speaker": "David A. Bednar",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/david-a-bednar.jpg",
@@ -1817,7 +1855,8 @@
     },
     {
       "week": "6",
-      "videos": [{
+      "videos": [
+        {
           "title": " Nelson Death/Nelson Salvation",
           "speaker": "Russell M. Nelson",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/russell-m-nelson.jpg",
@@ -1869,14 +1908,15 @@
     },
     {
       "week": "7",
-      "videos": [{
+      "videos": [
+        {
           "title": " All Men Everywhere <br><sub> 2 Nephi 20 </sub>",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-2.jpg",
           "frameURL": "https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&playerId=kaltura_player&entry_id=0_k6ttw8ww&flashvars[streamerType]=auto&flashvars[mediaProxy.mediaPlayTo]=300&flashvars[mediaProxy.mediaPlayFrom]=188&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&&wid=0_oqubdp28"
         },
         {
-          "title": " Gospel Teaching <br><sub> 2 Nephi 26  </sub>",
+          "title": " Gospel Teaching <br><sub> 2 Nephi 26 <br>",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-3.jpg",
           "frameURL": "https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&playerId=kaltura_player&entry_id=0_js4dwqrn&flashvars[streamerType]=auto&flashvars[mediaProxy.mediaPlayTo]=598&flashvars[mediaProxy.mediaPlayFrom]=545&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&&wid=0_oqubdp28"
@@ -1921,7 +1961,8 @@
     },
     {
       "week": "8",
-      "videos": [{
+      "videos": [
+        {
           "title": " All Men Everywhere",
           "speaker": "Dallin H. Oaks",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/dallin-h-oaks-2.jpg",
@@ -1973,7 +2014,8 @@
     },
     {
       "week": "9",
-      "videos": [{
+      "videos": [
+        {
           "title": " Chastity: What Are the Limits?",
           "speaker": "Mormon Message",
           "imageURL": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/chastity.jpg",

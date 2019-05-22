@@ -4,6 +4,7 @@
 const [fs, Async] = [require("fs"), require("async")];
 const stringify = require("json-stringify-pretty-compact");
 
+
 /*
 Appends custom flag
 
@@ -65,11 +66,14 @@ function createHarchObject(object2Reduce, arrayName = "values") {
 
 
 function cleanWeekData(video) {
+
     return {
         title: video.title,
         speaker: video.speaker,
         imageURL: video.imageURL,
-        frameURL: video.frameURL
+        frameURL: video.frameURL,
+        // start: video.start,
+        // end: video.end
     }
 }
 
@@ -105,7 +109,7 @@ function sortHarchObjectAlph(object1, object2) {
 
 function writeToJSON(data) {
     // writes the video data into the json file
-    fs.writeFileSync("./digging-deeper-video-data.json", stringify(data).replace(/\,\n\s*(\{\})/g, ""), "utf8");
+    fs.writeFileSync("./digging-deeper-video-data-2.json", stringify(data).replace(/\,\n\s*(\{\})/g, ""), "utf8");
 }
 
 function cleanJSON(data, filename, itemToAppend) {
@@ -186,7 +190,7 @@ function condenseObjets(path, complete) {
             }
             // Take all of the objects and put them into one big object 
             var completeData = res.reduce(function (acc, videoData) {
-                console.log(acc)
+                //console.log(acc)
                 acc.videos.push(...videoData);
                 return acc;
             }, {
@@ -202,7 +206,7 @@ function condenseObjets(path, complete) {
 // MAIN
 (function () {
     // gets the raw list of videos from all the files in the inputed directory
-    condenseObjets(process.argv[2], function (data) {
+    condenseObjets("./scripts", function (data) {
         var consolidatedObject = consolidateByKey(data.videos, "courseCode");
         // takes the array of objects and turns it into a harch object
         var courses = createHarchObject(consolidatedObject, "weeks");
@@ -222,7 +226,7 @@ function condenseObjets(path, complete) {
 
         // takes the now clean data and puts it into a JSON file.
         writeToJSON(completeData.reduce(function (acc, courseObject) {
-            console.log(courseObject);
+            //console.log(courseObject);
             acc[courseObject.week] = courseObject.weeks;
             return acc;
         }, {}));
