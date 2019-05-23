@@ -1,5 +1,7 @@
 'use strict';
-
+// const videoDataFile = "./digging-deeper-video-data.json";
+const videoDataFile = "./new.json";
+console.log(videoDataFile);
 /*
  * This expects 2 queries from the url:
  * course - the course code for the course it is running from
@@ -168,7 +170,7 @@ loadAnimation();
     function build() {
 
         // get the video data JSON file data from the server
-        $.getJSON("./digging-deeper-video-data.json", function (data) {
+        $.getJSON(videoDataFile, function (data) {
 
 
             // when the video is ready to load, fade out of the loading screen.
@@ -177,9 +179,17 @@ loadAnimation();
             }, 500, function () {
                 //once the loading box is hidden, begin rendering the video boxes
                 $("#videoFrameLoader").html('<div id="flex-container" data-featherlight-gallery data-featherlight-filter=".internal"></div>');
-
+                /*FIX THIS TUESDAY!!!*/
+                function getIndexOfSubobject(object, subkey, vaulez) {
+                    for (var i in object) {
+                        console.log(object[i][subkey], vaulez);
+                        if (object[i][subkey] === vaulez)
+                            return i;
+                    }
+                    return -1;
+                }
                 // load the videos from the JSON data
-                data[Course][Module].videos.forEach(insertVideo);
+                data[Course][getIndexOfSubobject(data[Course], "week", Module)].videos.forEach(insertVideo);
 
                 // Display the video boxes. It slowly fades in to buy some time for the image rendering.
                 $(document).ready(function () {
