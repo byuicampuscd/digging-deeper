@@ -1,0 +1,34 @@
+{
+  "name": "digging-deeper",
+  "version": "1.0.0",
+  "main": "buildScriptTagz.js",
+  "devDependencies": {
+    "async": "^3.0.0",
+    "json-stringify-pretty-compact": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server",
+    "thinglkjasl": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byuitechops/digging-deeper.git"
+  },
+  "author": "Eric Julander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byuitechops/digging-deeper/issues"
+  },
+  "homepage": "https://github.com/byuitechops/digging-deeper#readme",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "base64-img": "^1.0.4",
+    "g": "^2.0.1",
+    "image-downloader": "^3.4.2",
+    "live-server": "^1.2.1",
+    "liveserver": "^0.1.20",
+    "node-minify": "^3.6.0"
+  },
+  "description": ""
+}

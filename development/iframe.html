@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digging Deeper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" -->
+    <!-- href="https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/diggingDeeper.css" /> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.gallery.min.css" />
+
+    <style>
+        #videoLength {
+            text-align: center;
+        }
+
+        html {
+            font-family: sans-serif;
+        }
+
+        #flex-container {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+        }
+
+        #flex-container>a {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: .5s;
+            border-bottom: none;
+            min-height: 330px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: space;
+        }
+
+        #flex-container>a:hover {
+            transform: scale(1.05);
+        }
+
+        #flex-container>a p {
+            position: absolute;
+            opacity: .95;
+            bottom: 10px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+            background: #663441;
+            transition: .5s;
+            font-weight: 500;
+        }
+
+        .sub,
+        sub {
+            font-size: 16px;
+            color: #b1b1b1;
+            /*    color: #cdb500;*/
+            font-weight: 200;
+        }
+
+        a:hover .sub,
+        a:hover sub {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        div.featherlight-content {
+            /*    max-width: 643px;*/
+            width: 55%;
+            height: 53%;
+        }
+
+        div.featherlight-content iframe {
+            /*    max-width: 643px;*/
+            width: 100%;
+            height: 100%;
+        }
+
+        .featherlight-next,
+        .featherlight-previous {
+            height: 93.7%;
+        }
+
+        #flex-container>a:hover p {
+            background: #437178;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #7b7b7b;
+        }
+
+        div.featherlight-content {
+            width: 95%;
+            margin: auto;
+        }
+
+        /* Old Gradient */
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#437178+50,437178+50,437178+77,ffffff+100&1+16,0.75+62,0.31+85,0+100 */
+        /*
+    background: -moz-linear-gradient(top, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.46) 77%, rgba(132, 162, 167, 0.31) 85%, rgba(255, 255, 255, 0) 100%);
+     FF3.6-15 
+    background: -webkit-linear-gradient(top, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.46) 77%, rgba(132, 162, 167, 0.31) 85%, rgba(255, 255, 255, 0) 100%);
+     Chrome10-25,Safari5.1-6 
+    background: linear-gradient(to bottom, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.46) 77%, rgba(132, 162, 167, 0.31) 85%, rgba(255, 255, 255, 0) 100%);
+    */
+
+        #videoLength {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#437178+50,437178+50,437178+77,ffffff+100&1+16,0.75+62,0.31+85,0+100 */
+            background: -moz-linear-gradient(top, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.82) 77%, rgba(132, 162, 167, 0.82) 100%, rgba(255, 255, 255, 82) 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.82) 77%, rgba(132, 162, 167, 0.82) 100%, rgba(255, 255, 255, 82) 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(67, 113, 120, 1) 16%, rgba(67, 113, 120, 0.82) 50%, rgba(67, 113, 120, 0.75) 62%, rgba(67, 113, 120, 0.82) 77%, rgba(132, 162, 167, 0.82) 100%, rgba(255, 255, 255, 82) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#437178', endColorstr='#00ffffff', GradientType=0);
+            /* IE6-9 */
+            position: fixed;
+            bottom: 0;
+            z-index: 100;
+            width: 92%;
+            margin: auto;
+            padding: 2.5%;
+            color: white;
+            font-weight: 500;
+
+
+        }
+
+        /* NEW CODE */
+
+        div.featherlight-content iframe {
+            padding-bottom: 4%;
+
+        }
+
+        /*
+            #flex-container > a img {
+                 width: 100%;
+                 height:75%;
+            }   
+        */
+        /*Original Inline CSS*/
+        .featherlight-next,
+        .featherlight-previous {
+            height: calc(100% - 50px) !important;
+        }
+
+        div.featherlight-content {
+            height: 75% !important;
+        }
+
+        #videoFrameLoader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="videoFrameLoader" class="externalContent">
+        <div class="loader"></div>
+        <p id="loadingSign">Loading</p>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.gallery.min.js"></script>
+    <script id="diggingDeeperTemplate" src="digging-deeper-renderer.js" type="text/javascript"> </script>
+</body>
+
+</html>
