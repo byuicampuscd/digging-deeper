@@ -1,7 +1,31 @@
 'use strict';
-var videoDataFile = "./digging-deeper-video-data-2.json";
-// const videoDataFile = "./new.json";
-console.log(videoDataFile);
+// silly loading animation
+var loading = true;
+var loadingPhases = ["Loading", ".Loading.", "..Loading..", "...Loading...", "..Loading..", ".Loading."]
+var phase = 0;
+
+function loadAnimation() {
+    if (loading)
+        setTimeout(function () {
+            $("#loadingSign").text(loadingPhases[phase]);
+            phase = (phase >= loadingPhases.length) ? 0 : phase + 1;
+            loadAnimation();
+        }, 100);
+}
+loadAnimation();
+
+
+var videoDataFile = "";
+var videoFileLocations = {
+    "121": "../development/JSON Files/121VideoData.json",
+    "122": "../development/JSON Files/122VideoData.json",
+    "121P": "../development/JSON Files/121PVideoData.json",
+}
+
+
+
+
+// const videoDataFile = "./digging-deeper-video-data-2.json";
 /*
  * This expects 2 queries from the url:
  * course - the course code for the course it is running from
@@ -35,21 +59,10 @@ if (!recievedDataFromQuery) {
     // implemented bugfix get the data straight through the query
     course = moduleInfo.course;
     course_module = moduleInfo.module;
-}
-// silly loading animation
-var loading = true;
-var loadingPhases = ["Loading", ".Loading.", "..Loading..", "...Loading...", "..Loading..", ".Loading."]
-var phase = 0;
+    videoDataFile = videoFileLocations[course];
+    console.log(videoDataFile, course);
 
-function loadAnimation() {
-    if (loading)
-        setTimeout(function () {
-            $("#loadingSign").text(loadingPhases[phase]);
-            phase = (phase >= loadingPhases.length) ? 0 : phase + 1;
-            loadAnimation();
-        }, 100);
 }
-loadAnimation();
 
 // sets up the digging deeper object
 (function (Course, Module) {
@@ -181,7 +194,7 @@ loadAnimation();
                 $("#videoFrameLoader").html('<div id="flex-container" data-featherlight-gallery data-featherlight-filter=".internal"></div>');
 
                 // load the videos from the JSON data
-                data[Course][parseInt(Module) - 1].videos.forEach(insertVideo);
+                data[parseInt(Module) - 1].videos.forEach(insertVideo);
 
                 // Display the video boxes. It slowly fades in to buy some time for the image rendering.
                 $(document).ready(function () {

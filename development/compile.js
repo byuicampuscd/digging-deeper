@@ -1,6 +1,6 @@
 const compressor = require('node-minify');
-const https = require("https");
 const base64Img = require('base64-img');
+const download = require('image-downloader')
 const async = require('async');
 const fs = require("fs");
 
@@ -40,51 +40,12 @@ console = (function () {
 }());
 
 
-
-function mergeObjects(acc, object) {
-    for (var i in object)
-        acc[i] = object[i];
-    return acc;
-}
-
-function grabLinksFromJson(filePath, cb) {
-    fs.readFile(filePath, function (err, data) {
-        if (err) cb(err);
-        var originalJSON = JSON.parse(data);
-        var json = JSON.parse(data);
-        var files = {}
-        for (var i in json)
-            json[i] = json[i].map((a) => {
-                return a.videos.map(function (b, index) {
-                    var placeholder = {};
-                    placeholder[i + "-" + a.Module + "-" + index] = b.imageURL;
-                    return placeholder;
-                }).reduce(mergeObjects, {});
-            }).reduce(mergeObjects, {});
-
-        var merger = {};
-        for (var i in json)
-            json = mergeObjects(merger, json[i]);
-        var arrayObject = [];
-        for (var i in json)
-            arrayObject.push([i, json[i]]);
-        json = arrayObject;
-        cb(null, {
-            old: originalJSON,
-            new: json
-        });
-    });
-}
-
-const download = require('image-downloader')
-
-function downloadImages(IMG, callback) {
-    //console.log(IMG);
+function downloadImages(imageURL, destination, callback) {
 
     // Download to a directory and save with the original filename
     const options = {
-        url: IMG[1],
-        dest: 'imagez' // Save to /path/to/dest/image.jpg
+        url: imageURL,
+        dest: destination // Save to /path/to/dest/image.jpg
     }
 
     download.image(options)
@@ -92,12 +53,23 @@ function downloadImages(IMG, callback) {
             filename,
             image
         }) => {
-            //console.log('File saved to', filename)
-            callback(null, [IMG[0], filename]);
+
+            callback(null, filename);
         })
         .catch((err) => {
             callback(err);
         })
+}
+
+function convertImageToBase64EncodedString(imagePath, callback) {
+    base64Img.base64(imagePath, function (err, data) {
+        if (err) {
+            callback(err);
+            return;
+        }
+        var image = data;
+        callback(null, image);
+    });
 }
 
 
@@ -105,49 +77,97 @@ function replaceImagesInJson(json, imageData) {
 
 };
 
-function base64EncodeJsonImages() {
-    var jsonFile = "./digging-deeper-video-data-2.json";
-    grabLinksFromJson(jsonFile, function (err, data) {
-        if (err) console.error(err);
-        //console.log(data.new);
-        async.map(data.new, function (a, callback) {
-            downloadImages(a, callback);
-        }, function (err, urlImages) {
-            if (err) console.error(err);
-            async.map(urlImages, function (image, callback) {
-                base64Img.base64(image[1], function (err, data) {
-                    if (err) {
-                        callback(err);
-                        return;
-                    }
-                    image[1] = data;
-                    callback(null, image);
-                });
-            }, function (er, base64ImagePairs) {
-                if (er) console.error(er);
-                base64ImagePairs.forEach(function (item, index) {
-                    var imgLoc = (item[0].split("-"));
+function handleError(e) {
+    console.error(e);
+}
 
-                    //console.log(getIndexOfSubobject(data.old[imgLoc[0]], "week", imgLoc[1]));
-                    try {
 
-                        var moduleIndex = (imgLoc[1]);
-                        console.log(data.old[imgLoc[0]][parseInt(moduleIndex) - 1].videos[imgLoc[2]].imageURL);
-                        data.old[imgLoc[0]][parseInt(moduleIndex) - 1].videos[imgLoc[2]].imageURL = item[1];
-                        //console.log(data.old[imgLoc[0]][index].videos[imgLoc[2]].imageURL);
-                    } catch (e) {
-                        console.flag("Could Not Process Image For Item:\n" + item[0]);
-                    }
-                });
-
-                fs.writeFile("./new.json", JSON.stringify(data.old), function () {
-                    console.log("Riab Roy Boss!");
-                });
-
-            });
-        });
+function getJsonData(path, callback) {
+    fs.readFile(path, "utf8", function (err, jsonFile) {
+        if (err) callback(e);
+        var jsonData = JSON.parse(jsonFile);
+        callback(null, jsonData);
     });
 }
+
+function getImageFromVideoObject(videoObject, downloadDestination, callback) {
+    downloadImages(videoObject.imageURL, downloadDestination, (err, destination) => {
+        console.log(videoObject.imageURL);
+        if (err) callback(err);
+        convertImageToBase64EncodedString(destination, (error, base64Data) => {
+            if (error) callback(error);
+            videoObject.imageURL = base64Data;
+            callback(null, videoObject);
+        })
+    });
+
+}
+
+
+function writeToJsonFile(path, data, callback) {
+    fs.writeFileSync(path, JSON.stringify(data), function (err) {
+        if (err) callback(err);
+        callback();
+    });
+}
+
+function base64EncodeJsonImages() {
+    var jsonFile = "./digging-deeper-video-data-2.json";
+    var downloadDestination = "./imagez";
+    getJsonData(jsonFile, (err, jsonVideoData) => {
+
+        if (err) handleError(err);
+        var courses = [];
+        for (var course in jsonVideoData) {
+            courses.push([jsonVideoData[course], course]);
+        }
+        async.map(courses, (course, courseDataCallback) => {
+            async.map(course[0], (Module, moduleDataCallback) => {
+                async.map(Module.videos, (videoObject, videoDataCallback) => {
+                    getImageFromVideoObject(videoObject, downloadDestination, videoDataCallback);
+                }, (error, videoData) => {
+                    if (error) moduleDataCallback(err);
+                    Module.videos = videoData;
+                    moduleDataCallback(null, Module);
+                });
+            }, (err, modifiedCourseData) => {
+                if (err) courseDataCallback(err);
+                console.flag(modifiedCourseData.length);
+                course[0] = modifiedCourseData;
+                courseDataCallback(null, course);
+            });
+        }, function (errorMessage, courseData) {
+            if (errorMessage) handleError(errorMessage);
+            courseData.map(function (course) {
+                jsonVideoData[course[1]] = course[0];
+            });
+
+            writeToJsonFile("./base64JSONTest.json", jsonVideoData, function (err) {
+                if (err) handleError(err);
+                console.flag("Finished Process");
+            });
+
+
+        });
+
+
+
+    });
+
+};
+
+(function splitJSONFile() {
+    var jsonFile = "./base64JSONTest.json";
+    getJsonData(jsonFile, function (err, jsonData) {
+        if (err) handleError(err);
+        for (var course in jsonData) {
+            writeToJsonFile(`./JSON Files/${course}VideoData.json`, jsonData[course], function (error) {
+                if (error) handleError(error);
+                console.flag("Complete!");
+            });
+        }
+    })
+})();
 
 function condenseScripts() {
     // Using Google Closure Compiler
@@ -191,4 +211,3 @@ function condenseScripts() {
     // promise.then(function (min) {});
 
 }
-condenseScripts();
