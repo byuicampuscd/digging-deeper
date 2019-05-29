@@ -183,7 +183,7 @@ if (!recievedDataFromQuery) {
 
 
     function throwError(errMessage) {
-        $("#videoFrameLoader").html('We could not find any videos for this module! <br> Please notify your instructor immediatley so we can reslove the issue. When contacting your professor, please also include the error message below.  <br> Sorry for the inconvenience! <br>  <div id="details"></div>');
+        $("#videoFrameLoader").html('We could not find any videos for this module! <br> Please notify your instructor immediatley so we can reslove the issue. When contacting your instructor, please include the error message below.  <br> Sorry for the inconvenience! <br>  <div id="details"></div>');
 
         var visible = false;
 
