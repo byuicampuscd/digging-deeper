@@ -1,0 +1,18 @@
+{
+  "name": "digging-deeper-json",
+  "version": "1.0.0",
+  "description": "This modifies JSON files to be used with the digging deeper module",
+  "main": "bin.js",
+  "scripts": {
+    "test": "split  ../development/digging-deeper-video-data.json ./output"
+  },
+  "keywords": [
+    "digging",
+    "deeper"
+  ],
+  "author": "Eric Julander",
+  "license": "MIT",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
