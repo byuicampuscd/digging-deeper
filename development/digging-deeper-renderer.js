@@ -1,7 +1,31 @@
 'use strict';
-var videoDataFile = "./digging-deeper-video-data-2.json";
-// const videoDataFile = "./new.json";
-console.log(videoDataFile);
+// silly loading animation
+var loading = true;
+var loadingPhases = ["Loading", ".Loading.", "..Loading..", "...Loading...", "..Loading..", ".Loading."]
+var phase = 0;
+
+function loadAnimation() {
+    if (loading)
+        setTimeout(function () {
+            $("#loadingSign").text(loadingPhases[phase]);
+            phase = (phase >= loadingPhases.length) ? 0 : phase + 1;
+            loadAnimation();
+        }, 100);
+}
+loadAnimation();
+
+
+var videoDataFile = "";
+var videoFileLocations = {
+    "121": "../development/JSON Files/121VideoData.json",
+    "122": "../development/JSON Files/122VideoData.json",
+    "121P": "../development/JSON Files/121PVideoData.json",
+}
+
+
+
+
+// const videoDataFile = "./digging-deeper-video-data-2.json";
 /*
  * This expects 2 queries from the url:
  * course - the course code for the course it is running from
@@ -35,21 +59,10 @@ if (!recievedDataFromQuery) {
     // implemented bugfix get the data straight through the query
     course = moduleInfo.course;
     course_module = moduleInfo.module;
-}
-// silly loading animation
-var loading = true;
-var loadingPhases = ["Loading", ".Loading.", "..Loading..", "...Loading...", "..Loading..", ".Loading."]
-var phase = 0;
+    videoDataFile = videoFileLocations[course];
+    console.log(videoDataFile, course);
 
-function loadAnimation() {
-    if (loading)
-        setTimeout(function () {
-            $("#loadingSign").text(loadingPhases[phase]);
-            phase = (phase >= loadingPhases.length) ? 0 : phase + 1;
-            loadAnimation();
-        }, 100);
 }
-loadAnimation();
 
 // sets up the digging deeper object
 (function (Course, Module) {
@@ -167,6 +180,30 @@ loadAnimation();
         document.querySelector('#' + id + ' p').innerHTML = info.speaker + '<br><span class="sub">' + info.title + '</span>';
     }
 
+
+
+    function throwError(errMessage) {
+        $("#videoFrameLoader").html('We could not find any videos for this module! <br> Please notify your instructor immediatley so we can reslove the issue. When contacting your professor, please also include the error message below.  <br> Sorry for the inconvenience! <br>  <div id="details"></div>');
+
+        var visible = false;
+
+        function showHide() {
+            if (visible) {
+                visible = false;
+                $("#details").css("visibility", "hidden");
+            } else {
+                visible = true;
+                $("#details").css("visibility", "visible");
+            }
+        }
+
+        $("#showHide").click(function () {
+            showHide();
+        });
+        $("#details").html("Error: " + errMessage);
+        $("#details").css("color", "red");
+    }
+
     function build() {
 
         // get the video data JSON file data from the server
@@ -181,8 +218,11 @@ loadAnimation();
                 $("#videoFrameLoader").html('<div id="flex-container" data-featherlight-gallery data-featherlight-filter=".internal"></div>');
 
                 // load the videos from the JSON data
-                data[Course][parseInt(Module) - 1].videos.forEach(insertVideo);
-
+                if (data[parseInt(Module) - 1] === undefined) {
+                    throwError('Module <b style="text-decoration: underline">' + Module + "</b> for the " + course + " course does not exist. Please make sure this is correct.");
+                } else {
+                    data[parseInt(Module) - 1].videos.forEach(insertVideo);
+                }
                 // Display the video boxes. It slowly fades in to buy some time for the image rendering.
                 $(document).ready(function () {
                     loading = false;
@@ -194,6 +234,19 @@ loadAnimation();
                 });
 
             });
+        }).fail(function () {
+            $("#videoFrameLoader").animate({
+                opacity: 0
+            }, 500);
+            $(document).ready(function () {
+                loading = false;
+                setTimeout(function () {
+                    $("#videoFrameLoader").animate({
+                        opacity: 1
+                    }, 500)
+                }, 500);
+            });
+            throwError('You have entered an invalid course code. Please make sure that the course code <b style="text-decoration: underline">' + course + "</b> is correct");
         });
 
     }
