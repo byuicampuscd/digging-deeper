@@ -17,9 +17,9 @@ loadAnimation();
 
 var videoDataFile = "";
 var videoFileLocations = {
-    "121": "../development/JSON Files/121VideoData.json",
-    "122": "../development/JSON Files/122VideoData.json",
-    "121P": "../development/JSON Files/121PVideoData.json",
+    "121": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/121VideoData.js",
+    "122": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/122VideoData.js",
+    "121P": "https://content.byui.edu/integ/gen/7a262da4-897d-47fc-a0ac-4b07a1f1e964/0/121PVideoData.js",
 }
 
 
@@ -206,9 +206,17 @@ if (!recievedDataFromQuery) {
 
     function build() {
 
-        // get the video data JSON file data from the server
-        $.getJSON(videoDataFile, function (data) {
+        function injectJS(jsFile, callback) {
+            var scriptTag = document.createElement('script');
+            scriptTag.src = jsFile
+            scriptTag.onload = callback;
+            document.body.appendChild(scriptTag);
+        }
 
+
+        function startProcess() {
+
+            // DUE TO THE NATURE OF CANVAS, WE DEPEND ON THE GLOBAL VARIABLE: COURSE_DATA;
 
             // when the video is ready to load, fade out of the loading screen.
             $("#videoFrameLoader").animate({
@@ -218,10 +226,10 @@ if (!recievedDataFromQuery) {
                 $("#videoFrameLoader").html('<div id="flex-container" data-featherlight-gallery data-featherlight-filter=".internal"></div>');
 
                 // load the videos from the JSON data
-                if (data[parseInt(Module) - 1] === undefined) {
+                if (COURSE_DATA[parseInt(Module) - 1] === undefined) {
                     throwError('Module <b style="text-decoration: underline">' + Module + "</b> for the " + course + " course does not exist. Please make sure this is correct.");
                 } else {
-                    data[parseInt(Module) - 1].videos.forEach(insertVideo);
+                    COURSE_DATA[parseInt(Module) - 1].videos.forEach(insertVideo);
                 }
                 // Display the video boxes. It slowly fades in to buy some time for the image rendering.
                 $(document).ready(function () {
@@ -234,22 +242,11 @@ if (!recievedDataFromQuery) {
                 });
 
             });
-        }).fail(function () {
-            $("#videoFrameLoader").animate({
-                opacity: 0
-            }, 500);
-            $(document).ready(function () {
-                loading = false;
-                setTimeout(function () {
-                    $("#videoFrameLoader").animate({
-                        opacity: 1
-                    }, 500)
-                }, 500);
-            });
-            throwError('You have entered an invalid course code. Please make sure that the course code <b style="text-decoration: underline">' + course + "</b> is correct");
-        });
+        }
 
+        injectJS(videoFileLocations[course], startProcess);
     }
+
     $(document).ready(build);
 
 })(course, course_module);
